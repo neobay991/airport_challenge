@@ -19,4 +19,10 @@ describe Weather do
     end
   end
 
+  # describe '#random_number' do
+  #   it 'should set weather to not be stormy' do
+  #     expect(subject.random_number).to eq false
+  #   end
+  # end
+
 end
