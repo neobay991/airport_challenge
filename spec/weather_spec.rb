@@ -14,6 +14,7 @@ describe Weather do
     end
 
     it 'should set the weather to be stormy' do
+      #weather = double(:weather)
       subject.stormy = true
       expect(subject.stormy?).to eq true
     end
