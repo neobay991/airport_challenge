@@ -34,13 +34,15 @@ describe Airport do
       plane = Plane.new
       weather = Weather.new
       weather.stormy = true
-      expect{ subject.land(plane, weather) }.to raise_error "cannot land due to weather being stormy"
+      message = "cannot land due to stormy weather"
+      expect { subject.land(plane, weather) }.to raise_error message
     end
 
     it 'should not be possible to land if airport is full' do
       plane = Plane.new
       weather = Weather.new
-      expect{ 100.times{subject.land(plane, weather)} }.to raise_error "cannot land due to airport being full"
+      message = "cannot land due to airport being full"
+      expect { 100.times { subject.land(plane, weather) } }.to raise_error message
     end
 
   end
@@ -60,14 +62,15 @@ describe Airport do
       weather = Weather.new
       subject.land(plane, weather)
       subject.take_off(weather)
-      expect(subject.take_off(weather)).to eq "Plane has left the airport"
+      message = "Plane has left the airport"
+      expect(subject.take_off(weather)).to eq message
     end
 
     it 'should not be possible to take-off if weather is stormy' do
-      plane = Plane.new
       weather = Weather.new
       weather.stormy = true
-      expect{ subject.take_off(weather) }.to raise_error "cannot take off due to weather being stormy"
+      message = "cannot take-off due to stormy weather"
+      expect { subject.take_off(weather) }.to raise_error message
     end
 
   end

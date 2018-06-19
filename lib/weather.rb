@@ -10,9 +10,9 @@ class Weather
     @stormy
   end
 
-  def set_weather
-    random_number
-  end
+  # def set_weather
+  #   random_number
+  # end
 
   def random_number
     number = rand(4)
