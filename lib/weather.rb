@@ -11,14 +11,14 @@ class Weather
     # @stormy = random_number
   end
 
-  # def random_number
-  #   number = rand(4)
-  #   # if number = 1, than weather is not stormy
-  #   if number != 1
-  #     @stormy = false
-  #   else
-  #     @stormy = true
-  #   end
-  # end
+  def random_number
+    number = rand(4)
+    # if number = 1, than weather is stormy
+    if number == 1
+      @stormy = true
+    else
+      @stormy = false
+    end
+  end
 
 end
