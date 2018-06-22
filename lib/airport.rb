@@ -21,7 +21,7 @@ class Airport
 
   def take_off(plane, weather)
     fail "cannot take-off due to stormy weather" if weather.stormy? == true
-    fail 'cannot take-off plane, plane not at this airport' unless @planes.include?(plane)
+    fail 'cannot take-off plane, plane not at this airport' unless at_airport?(plane)
     @planes.pop
     # "Plane has left the airport"
   end
@@ -30,4 +30,7 @@ class Airport
     @planes.count >= @capacity
   end
 
+  def at_airport?(plane)
+    @planes.include?(plane)
+  end
 end
