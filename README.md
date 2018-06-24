@@ -25,6 +25,7 @@ Test coverage is: 100%
 
 What is not implemented:
 -------
+* making the weather story randomly
 * edge cases such as inconsistent states of the system ensuring that planes can only take off from airports they are in
 
 User stories implemented
